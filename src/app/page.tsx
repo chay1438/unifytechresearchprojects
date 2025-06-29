@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import UnifyTechLogo from "@/components/UnifyTechLogo";
 import Unify3D from "@/components/Unify3D";
 import ZigZagLines from "@/components/ZigZagLines";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -70,7 +71,7 @@ export default function Home() {
         <section className="flex flex-col items-center gap-4 mt-8">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-fuchsia-600 via-sky-500 to-emerald-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">Ready to collaborate or learn more?</h2>
           <Button className="px-8 py-6 text-lg font-semibold shadow-xl bg-gradient-to-r from-fuchsia-500 via-sky-400 to-emerald-400 text-white hover:scale-105 transition-transform duration-300 animate-gradient-x" asChild>
-            <a href="#contact">Contact Us</a>
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </section>
       </main>
