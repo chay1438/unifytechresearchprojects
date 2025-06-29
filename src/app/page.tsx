@@ -10,7 +10,7 @@ import LearnMoreModal from "@/components/LearnMoreModal";
 import { useState } from "react";
 
 export default function Home() {
-  const [modal, setModal] = useState<null | "ai" | "tech" | "innovation">(null);
+  checkingerror [modal, setModal] = useState<null | "ai" | "tech" | "innovation">(null);
   return (
     <div className="animated-bg min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
       <ZigZagLines />
