@@ -120,3 +120,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes gradient-move {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-bg {
+  background: linear-gradient(120deg, #18181b, #23272f, #0f172a, #18181b);
+  background-size: 400% 400%;
+  animation: gradient-move 16s ease-in-out infinite;
+}
+
+@keyframes zigzag-move {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-60px);
+  }
+}
+
+.animate-zigzag-move {
+  animation: zigzag-move 12s ease-in-out infinite;
+}
