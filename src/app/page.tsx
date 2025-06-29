@@ -6,8 +6,11 @@ import UnifyTechLogo from "@/components/UnifyTechLogo";
 import Unify3D from "@/components/Unify3D";
 import ZigZagLines from "@/components/ZigZagLines";
 import Link from "next/link";
+import LearnMoreModal from "@/components/LearnMoreModal";
+import { useState } from "react";
 
 export default function Home() {
+  const [modal, setModal] = useState<null | "ai" | "tech" | "innovation">(null);
   return (
     <div className="animated-bg min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
       <ZigZagLines />
@@ -20,6 +23,54 @@ export default function Home() {
           Showcasing cutting-edge <span className="font-semibold text-accent">AI technologies</span>, research, and innovation. Empowering the future with modern, graceful design.
         </p>
       </header>
+      <LearnMoreModal
+        open={modal === "ai"}
+        onClose={() => setModal(null)}
+        title="AI Research"
+        icon={<span className="text-fuchsia-400">🧠</span>}
+      >
+        <div className="text-left">
+          <p className="mb-2">Our AI research spans deep learning, generative models, and real-world applications. We focus on:</p>
+          <ul className="list-disc pl-5 text-sm text-foreground/80">
+            <li>Large-scale neural networks and LLMs</li>
+            <li>Generative AI for text, images, and audio</li>
+            <li>AI safety, explainability, and ethics</li>
+            <li>Collaboration with academia and industry</li>
+          </ul>
+        </div>
+      </LearnMoreModal>
+      <LearnMoreModal
+        open={modal === "tech"}
+        onClose={() => setModal(null)}
+        title="Tech Stack"
+        icon={<span className="text-sky-400">🛠️</span>}
+      >
+        <div className="text-left">
+          <p className="mb-2">We leverage the latest technologies to build robust, scalable AI solutions:</p>
+          <ul className="list-disc pl-5 text-sm text-foreground/80">
+            <li>Python, TypeScript, and Rust for core development</li>
+            <li>TensorFlow, PyTorch, and ONNX for ML</li>
+            <li>Cloud-native and edge AI deployment</li>
+            <li>Modern MLOps and CI/CD pipelines</li>
+          </ul>
+        </div>
+      </LearnMoreModal>
+      <LearnMoreModal
+        open={modal === "innovation"}
+        onClose={() => setModal(null)}
+        title="Innovation"
+        icon={<span className="text-emerald-400">🚀</span>}
+      >
+        <div className="text-left">
+          <p className="mb-2">Innovation is at the heart of UnifyTech. We:</p>
+          <ul className="list-disc pl-5 text-sm text-foreground/80">
+            <li>Prototype and launch AI-powered products</li>
+            <li>Drive research-to-market translation</li>
+            <li>Host hackathons and open innovation challenges</li>
+            <li>Foster a culture of creativity and impact</li>
+          </ul>
+        </div>
+      </LearnMoreModal>
       <Unify3D />
       <main className="flex flex-col gap-8 w-full max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -33,7 +84,7 @@ export default function Home() {
               <div className="w-full h-2 bg-fuchsia-200/30 rounded-full overflow-hidden">
                 <div className="h-full bg-gradient-to-r from-fuchsia-400 via-sky-400 to-emerald-400 animate-progress-bar" style={{width: '85%'}}></div>
               </div>
-              <Button className="mt-2 bg-fuchsia-500/80 hover:bg-fuchsia-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm">Learn More</Button>
+              <Button className="mt-2 bg-fuchsia-500/80 hover:bg-fuchsia-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm" onClick={() => setModal("ai")}>Learn More</Button>
             </CardContent>
           </Card>
           <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-sky-400/40 before:to-fuchsia-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500 animate-fade-in-up [animation-delay:0.1s]">
@@ -51,7 +102,7 @@ export default function Home() {
               <div className="w-full h-2 bg-sky-200/30 rounded-full overflow-hidden">
                 <div className="h-full bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 animate-progress-bar" style={{width: '70%'}}></div>
               </div>
-              <Button className="mt-2 bg-sky-500/80 hover:bg-sky-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm">Learn More</Button>
+              <Button className="mt-2 bg-sky-500/80 hover:bg-sky-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm" onClick={() => setModal("tech")}>Learn More</Button>
             </CardContent>
           </Card>
           <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-400/40 before:to-fuchsia-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500 animate-fade-in-up [animation-delay:0.2s]">
@@ -64,7 +115,7 @@ export default function Home() {
               <div className="w-full h-2 bg-emerald-200/30 rounded-full overflow-hidden">
                 <div className="h-full bg-gradient-to-r from-emerald-400 via-fuchsia-400 to-sky-400 animate-progress-bar" style={{width: '95%'}}></div>
               </div>
-              <Button className="mt-2 bg-emerald-500/80 hover:bg-emerald-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm">Learn More</Button>
+              <Button className="mt-2 bg-emerald-500/80 hover:bg-emerald-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm" onClick={() => setModal("innovation")}>Learn More</Button>
             </CardContent>
           </Card>
         </section>
