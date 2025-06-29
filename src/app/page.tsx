@@ -22,7 +22,8 @@ export default function Home() {
       <Unify3D />
       <main className="flex flex-col gap-8 w-full max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="shadow-2xl border-2 border-fuchsia-400 bg-gradient-to-br from-fuchsia-100 via-sky-100 to-emerald-100 hover:scale-105 transition-transform duration-300">
+          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-fuchsia-400/40 before:to-sky-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500">
+            <div className="absolute top-4 right-4 text-fuchsia-400 text-3xl opacity-80 group-hover:scale-110 transition-transform duration-300">🧠</div>
             <CardHeader>
               <CardTitle className="bg-gradient-to-r from-fuchsia-600 via-sky-500 to-emerald-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">AI Research</CardTitle>
             </CardHeader>
@@ -30,7 +31,8 @@ export default function Home() {
               <p className="bg-gradient-to-r from-fuchsia-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">Explore our latest breakthroughs in machine learning, deep learning, and generative AI.</p>
             </CardContent>
           </Card>
-          <Card className="shadow-2xl border-2 border-sky-400 bg-gradient-to-br from-sky-100 via-fuchsia-100 to-emerald-100 hover:scale-105 transition-transform duration-300">
+          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-sky-400/40 before:to-fuchsia-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500">
+            <div className="absolute top-4 right-4 text-sky-400 text-3xl opacity-80 group-hover:scale-110 transition-transform duration-300">🛠️</div>
             <CardHeader>
               <CardTitle className="bg-gradient-to-r from-sky-600 via-fuchsia-500 to-emerald-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">Tech Stack</CardTitle>
             </CardHeader>
@@ -43,7 +45,8 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="shadow-2xl border-2 border-emerald-400 bg-gradient-to-br from-emerald-100 via-fuchsia-100 to-sky-100 hover:scale-105 transition-transform duration-300">
+          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-400/40 before:to-fuchsia-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500">
+            <div className="absolute top-4 right-4 text-emerald-400 text-3xl opacity-80 group-hover:scale-110 transition-transform duration-300">🚀</div>
             <CardHeader>
               <CardTitle className="bg-gradient-to-r from-emerald-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">Innovation</CardTitle>
             </CardHeader>
