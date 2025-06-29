@@ -163,3 +163,11 @@
 .animate-progress-bar {
   animation: progress-bar 1.6s cubic-bezier(.4,0,.2,1) both;
 }
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2.2s infinite cubic-bezier(.4,0,.2,1);
+}
