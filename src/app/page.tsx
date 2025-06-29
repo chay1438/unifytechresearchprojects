@@ -22,36 +22,48 @@ export default function Home() {
       <Unify3D />
       <main className="flex flex-col gap-8 w-full max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-fuchsia-400/40 before:to-sky-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500">
+          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-fuchsia-400/40 before:to-sky-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500 animate-fade-in-up">
             <div className="absolute top-4 right-4 text-fuchsia-400 text-3xl opacity-80 group-hover:scale-110 transition-transform duration-300">🧠</div>
             <CardHeader>
               <CardTitle className="bg-gradient-to-r from-fuchsia-600 via-sky-500 to-emerald-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">AI Research</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex flex-col gap-4">
               <p className="bg-gradient-to-r from-fuchsia-400 via-sky-400 to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">Explore our latest breakthroughs in machine learning, deep learning, and generative AI.</p>
+              <div className="w-full h-2 bg-fuchsia-200/30 rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-fuchsia-400 via-sky-400 to-emerald-400 animate-progress-bar" style={{width: '85%'}}></div>
+              </div>
+              <Button className="mt-2 bg-fuchsia-500/80 hover:bg-fuchsia-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm">Learn More</Button>
             </CardContent>
           </Card>
-          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-sky-400/40 before:to-fuchsia-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500">
+          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-sky-400/40 before:to-fuchsia-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500 animate-fade-in-up [animation-delay:0.1s]">
             <div className="absolute top-4 right-4 text-sky-400 text-3xl opacity-80 group-hover:scale-110 transition-transform duration-300">🛠️</div>
             <CardHeader>
               <CardTitle className="bg-gradient-to-r from-sky-600 via-fuchsia-500 to-emerald-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">Tech Stack</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex flex-col gap-4">
               <ul className="list-disc pl-4 bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">
                 <li>Large Language Models (LLMs)</li>
                 <li>Computer Vision</li>
                 <li>Natural Language Processing</li>
                 <li>Edge AI & Robotics</li>
               </ul>
+              <div className="w-full h-2 bg-sky-200/30 rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-sky-400 via-fuchsia-400 to-emerald-400 animate-progress-bar" style={{width: '70%'}}></div>
+              </div>
+              <Button className="mt-2 bg-sky-500/80 hover:bg-sky-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm">Learn More</Button>
             </CardContent>
           </Card>
-          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-400/40 before:to-fuchsia-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500">
+          <Card className="relative group overflow-hidden border-0 bg-white/10 backdrop-blur-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-br before:from-emerald-400/40 before:to-fuchsia-400/20 before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500 animate-fade-in-up [animation-delay:0.2s]">
             <div className="absolute top-4 right-4 text-emerald-400 text-3xl opacity-80 group-hover:scale-110 transition-transform duration-300">🚀</div>
             <CardHeader>
               <CardTitle className="bg-gradient-to-r from-emerald-600 via-fuchsia-500 to-sky-500 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">Innovation</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex flex-col gap-4">
               <p className="bg-gradient-to-r from-emerald-400 via-fuchsia-400 to-sky-400 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] animate-gradient-x">From research to real-world impact, we drive innovation in AI-powered solutions and products.</p>
+              <div className="w-full h-2 bg-emerald-200/30 rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-emerald-400 via-fuchsia-400 to-sky-400 animate-progress-bar" style={{width: '95%'}}></div>
+              </div>
+              <Button className="mt-2 bg-emerald-500/80 hover:bg-emerald-600/90 text-white shadow-md transition-transform duration-300 hover:scale-105" size="sm">Learn More</Button>
             </CardContent>
           </Card>
         </section>
