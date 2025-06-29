@@ -148,3 +148,18 @@
 .animate-zigzag-move {
   animation: zigzag-move 12s ease-in-out infinite;
 }
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(.4,0,.2,1) both;
+}
+@keyframes progress-bar {
+  0% { width: 0; }
+  100% { width: var(--tw-progress-bar-width, 100%); }
+}
+.animate-progress-bar {
+  animation: progress-bar 1.6s cubic-bezier(.4,0,.2,1) both;
+}
